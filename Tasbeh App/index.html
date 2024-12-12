@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Tasbeh Counter</title>
+     <link rel="stylesheet" href="styles.css">
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+     <div class="content">
+          <div class="dot-1" onclick="restart()"><ion-icon class="restart" name="refresh-outline"></ion-icon></div>
+          <div class="dot-2" onclick="toggleMode()">
+               <ion-icon name="sunny-outline" id="mode-icon"></ion-icon>
+          </div>
+          <div class="circle" id="circle" onclick="incrementCount()">
+               <span id="count">0</span>
+          </div>
+          <div class="counter"> <span id="tapCount">0</span> / 1000</div>
+     </div>
+
+     <div class="overlay" id="overlay"></div>
+     <div class="alert" id="alertBox">
+          <p id="alertMessage">You have reached 33 taps!</p>
+          <button onclick="closeAlert()">OK</button>
+     </div>
+
+     <audio id="alertSound" src="alert.mp3"></audio>
+
+     <script src="script.js"></script>
+</body>
+
+</html>
